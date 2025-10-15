@@ -1,0 +1,1 @@
+# ipsi_penyimpanan_barang
