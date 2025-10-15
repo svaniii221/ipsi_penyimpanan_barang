@@ -1,0 +1,115 @@
+:root{
+  --bg: #0d1117;
+  --card: #161b22;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #6366f1;
+  --danger: #dc2626;
+  --shadow: 0 4px 16px rgba(0,0,0,0.4);
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  padding:24px;
+  min-height:100vh;
+}
+
+.container{max-width:1000px;margin:0 auto;}
+header{text-align:center;margin-bottom:20px;}
+header h1{font-size:2rem;color:#cbd5e1;margin-bottom:6px;}
+header p{color:var(--muted);font-style:italic;}
+
+.controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  margin-bottom:18px;
+}
+.controls input[type="search"]{
+  flex:1;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #334155;
+  background:var(--card);
+  color:var(--text);
+}
+.controls button{
+  padding:10px 14px;
+  border:0;
+  border-radius:8px;
+  cursor:pointer;
+  color:white;
+  background:var(--accent);
+  transition:.2s;
+}
+.controls button:hover{background:#818cf8;}
+.controls .danger{background:var(--danger);}
+
+.layout{
+  display:grid;
+  grid-template-columns:1fr 350px;
+  gap:16px;
+}
+.list{
+  background:var(--card);
+  border-radius:12px;
+  padding:14px;
+  box-shadow:var(--shadow);
+  overflow:auto;
+  min-height:300px;
+}
+.item{
+  border:1px solid #334155;
+  border-radius:8px;
+  padding:10px;
+  margin-bottom:8px;
+  cursor:pointer;
+  transition:.2s;
+}
+.item:hover{background:#1e293b;}
+.item .meta{
+  display:flex;
+  justify-content:space-between;
+  font-size:.9rem;
+  color:var(--muted);
+}
+
+.editor{
+  background:var(--card);
+  border-radius:12px;
+  padding:16px;
+  box-shadow:var(--shadow);
+}
+.editor h2{margin-top:0;font-size:1.2rem;color:#e0e7ff;}
+label{display:block;margin-top:10px;font-size:.9rem;color:var(--muted);}
+input,textarea{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #334155;
+  background:#0f172a;
+  color:var(--text);
+}
+.editor-actions{
+  display:flex;
+  gap:10px;
+  margin-top:14px;
+}
+.editor-actions button{
+  padding:8px 12px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+}
+#saveBtn{background:var(--accent);color:white;}
+#cancelBtn{background:#475569;color:white;}
+footer{text-align:center;margin-top:20px;color:var(--muted);font-size:.85rem;font-style:italic;}
+
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr;}
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gudang Sunyi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Gudang Sunyi</h1>
+      <p>Tempat menyimpan barang-barang yang mungkin tak lagi digunakan, tapi masih bermakna.</p>
+    </header>
+
+    <section class="controls">
+      <input id="search" type="search" placeholder="Cari barang..." />
+      <button id="newBtn">+ Tambah Barang</button>
+      <button id="clearAll" class="danger">Hapus Semua</button>
+    </section>
+
+    <section class="layout">
+      <aside class="list" id="itemList">
+        <!-- daftar barang -->
+      </aside>
+
+      <section class="editor">
+        <h2 id="formTitle">Tambah Barang</h2>
+        <form id="itemForm">
+          <label>Nama Barang</label>
+          <input id="itemName" required placeholder="Nama barang..." />
+
+          <label>Jumlah</label>
+          <input id="itemQty" type="number" min="1" required placeholder="Jumlah..." />
+
+          <label>Kategori</label>
+          <input id="itemCategory" placeholder="Misal: Elektronik, Buku..." />
+
+          <label>Catatan</label>
+          <textarea id="itemNote" rows="4" placeholder="Tuliskan catatan tentang barang ini..."></textarea>
+
+          <div class="editor-actions">
+            <button type="submit" id="saveBtn">Simpan</button>
+            <button type="button" id="cancelBtn">Batal</button>
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <footer>
+      <small>Gudang Sunyi © 2025 — Semua tersimpan dalam diam.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
